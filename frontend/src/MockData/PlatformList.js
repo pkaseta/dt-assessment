@@ -10,8 +10,6 @@ export const platformList = [
     "PSX",
     "Nintendo 64",
     "XBOX360",
-    "IOS",
-    "Android",
     "Dreamcast",
     "Super Nintendo",
     "Nintendo",

@@ -2,8 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "../sass/Games.scss";
+
 
 const Games = () => {
   const [games, setGames] = useState([]);
@@ -104,10 +106,6 @@ const Games = () => {
               <i className="fa-brands fa-steam"></i>
             ) : game.platform.includes("XBOX") ? (
               <i className="fa-brands fa-xbox"></i>
-            ) : game.platform.includes("IOS") ? (
-              <i className="fa-brands fa-apple"></i>
-            ) : game.platform.includes("Android") ? (
-              <i className="fa-brands fa-android"></i>
             ) : (
               <div>
                 <i className="fa-solid fa-gamepad"></i>
@@ -120,7 +118,6 @@ const Games = () => {
               <button className="delete" onClick={() => handleDelete(game.id)}>
                 Delete
               </button>
-              {/* <button className="update"><Link to={`/update/${game.id}`}>Update</Link></button> */}
               <button>
                 <a
                   href={convertGameStopSearchQuerry(game.title)}

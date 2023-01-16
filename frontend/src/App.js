@@ -7,10 +7,11 @@ import Games from './Pages/Games';
 import Add from './Pages/Add';
 
 import './sass/App.scss'
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function App() {
-  const [formView, setFormView] = useState("add");
+  // const [formView, setFormView] = useState("add");
+  
   
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Add />} />
         </Routes>
-      <Games setForm={setFormView} />
+      <Games />
       </BrowserRouter>
     </div>
   );
